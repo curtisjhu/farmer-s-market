@@ -1,3 +1,4 @@
-class Posts < ApplicationRecord
-	has_many :comments, dependent: :destroy
+class Posts
+	include Mongoid::Document
+	include Mongoid::Attributes::Dynamic
 end
