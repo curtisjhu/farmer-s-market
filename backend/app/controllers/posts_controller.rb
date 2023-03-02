@@ -13,9 +13,10 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Posts.create(
-			image_src: params[:image_src], 
 			title: params[:title],
-			description: params[:description]
+			description: params[:description],
+			location: params[:location],
+			date: params[:date]
 		)
 		render json: @post
 	end
@@ -23,9 +24,10 @@ class PostsController < ApplicationController
 	def update 
 		@post = Posts.find(params[:id])
 		@post.update(
-			image_src: params[:image_src], 
 			title: params[:title],
-			description: params[:description]
+			description: params[:description],
+			location: params[:location],
+			date: params[:date]
 		)
 		render json: @post
 	end
