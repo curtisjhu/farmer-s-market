@@ -5,4 +5,5 @@ class ApplicationController < ActionController::API
 	# in Procs passed to #tracked method in your models
 	include PublicActivity::StoreController
 	include ActionView::Helpers::TextHelper  
+	
   end
