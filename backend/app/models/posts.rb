@@ -1,2 +1,3 @@
-class Posts < ActiveRecord::Base
+class Posts < ApplicationRecord
+	has_many :comments, dependent: :destroy
 end
