@@ -1,3 +1,6 @@
+config.api_only = true
+config.debug_exception_response_format = :api
+
 require_relative "boot"
 
 require "rails/all"
