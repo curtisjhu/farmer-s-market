@@ -1,3 +1,10 @@
+production:
+  clients:
+    default:
+      uri: <%= Rails.application.credentials.MONGODB_URI %>
+      options:
+        server_selection_timeout: 5
+
 development:
   # Configure available database clients. (required)
   clients:
@@ -122,7 +129,7 @@ development:
         # truncate_logs: true
 
   # Configure Mongoid specific options. (optional)
-  options:
+  # options:
     # Application name that is printed to the mongodb logs upon establishing
     # a connection in server versions >= 3.4. Note that the name cannot
     # exceed 128 bytes. It is also used as the database name if the
