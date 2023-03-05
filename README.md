@@ -1,7 +1,7 @@
 # Farmer's Market
 Small Public Pinboard for the farmers.
 
-This was a 1 day project. I learned Ruby + Rails from scratch. 
+This was a ~1 day project + some time to refine the code. I basically learned Ruby + Rails from scratch. 
 
 > Frontend: Next.js + tailwindcss -> vercel
 <br/>
