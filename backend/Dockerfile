@@ -4,4 +4,4 @@ WORKDIR /backend
 COPY . .
 RUN bundle install
 EXPOSE 3000
-CMD ["rails", "server", "-e", "production", "-p", "3000", "-h"]
+CMD ["rails", "server", "-e", "production", "-p", "3000"]
