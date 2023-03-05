@@ -4,6 +4,7 @@ Small Public Pinboard for the farmers.
 This was a 1 day project. I learned Ruby + Rails from scratch. 
 
 > Frontend: Next.js + tailwindcss -> vercel
+<br/>
 > Backend: RubyOnRails + MongoDB -> digital ocean docker container
 
 Not much security is in play here. I'm on the free tier so it doesn't matter that much. 
