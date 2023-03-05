@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -10,13 +10,37 @@ type Post = {
     date: string;
 };
 
+const textboxStyles = "my-2 focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm";
+
 export default function Home() {
     const [posts, setPosts] = useState<Post[]>([]);
+    const [error, setError] = useState("");
 
-    useEffect(() => {});
+    useEffect(() => {
+        fetch("https://seashell-app-wzb8g.ondigitalocean.app/", {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((data) => setPosts(data))
+            .catch((err) => {
+                setPosts([
+                    {
+                        title: "An error occurred",
+                        description: "",
+                        location: "",
+                        date: "",
+                    },
+                ]);
+            });
+    });
 
-    function createNewPost() {
-        fetch("", {});
+    function createNewPost(event: FormEvent) {
+        event.preventDefault();
+        console.log(event.target);
+        // fetch("https://seashell-app-wzb8g.ondigitalocean.app/", {
+        //     method: "POST",
+        //     body: JSON.stringify(params)            
+        // }).catch(err => setError(err.toString()))
     }
 
     return (
@@ -47,16 +71,19 @@ export default function Home() {
                 </div>
 
                 <form
-                    onSubmit={createNewPost}
-                    className="my-8 w-1/2 flex flex-col outline-none"
+                    onSubmit={(e) => createNewPost(e)}
+                    className="my-8 w-1/2 flex flex-col outline-none "
                 >
                     <div className="text-xl font-bold">Create a Post</div>
-                    <input type="text" placeholder="Title" />
-                    <input type="text" placeholder="Description" />
-                    <input type="text" placeholder="Location" />
-                    <input type="text" placeholder="Date" />
-                    <input type="submit" className="bg-black text-white" />
+                    <input type="text" placeholder="Title" className={textboxStyles} />
+                    <input type="text" placeholder="Description" className={textboxStyles} />
+                    <input type="text" placeholder="Location" className={textboxStyles} />
+                    <input type="text" placeholder="Date" className={textboxStyles} />
+                    <input type="submit" className={"bg-black text-white selection w-full rounded-md ring-1 shadow-sm appearance-none text-lg py-2 leading-6"} />
                 </form>
+                <div className="text-red">
+                    {error}
+                </div>
             </div>
 
             <Footer />
