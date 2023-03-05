@@ -8,11 +8,11 @@ const Header = () => {
                 <div>
                     <Link href="/" className="flex flex-row items-center">
 						<div className="font-extrabold text-2xl">
-                        	The Farmer's Market
+                        	The Farmer&apos;s Market
 						</div>
                     </Link>
 					<div className="flex flex-row space-x-3 text-slate-300">
-						What's your neighbor growing?
+						What&apos;s your neighbor growing?
 					</div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ function Footer() {
     return (
         <footer className="flex flex-col lg:grid lg:grid-cols-5 w-full bg-black text-white px-10 py-5">
             <div>
-                <h3 className="font-bold underline">The Farmer's Market</h3>
+                <h3 className="font-bold underline">The Farmer&apos;s Market</h3>
                 <p>Questions</p>
                 <p>Help</p>
             </div>
