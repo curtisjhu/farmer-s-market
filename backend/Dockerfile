@@ -3,5 +3,5 @@ RUN apt-get update && apt-get install -y nodejs
 WORKDIR /backend
 COPY . .
 RUN bundle install
-EXPOSE 3000
-CMD ["rails", "server", "-e", "production", "-p", "3000"]
+CMD ["rails", "server", "-e", "production", "-b", "0.0.0.0", "-p", "8080"]
+EXPOSE 8080
