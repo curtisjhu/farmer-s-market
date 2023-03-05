@@ -2,7 +2,7 @@
 class PostsController < ApplicationController
 
 	def index
-		@posts = Posts.all
+		@posts = Posts.limit(10).all
 		render json: @posts
 	end
 	

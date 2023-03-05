@@ -4,4 +4,4 @@ class ApplicationController < ActionController::API
 	include PublicActivity::StoreController
 	include ActionView::Helpers::TextHelper  
 	
-  end
+end

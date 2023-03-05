@@ -4,8 +4,7 @@ development:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      # uri: mongodb://curtisjhu:UNCkrRmmR8wTIxfb@ac-1ch4szh-shard-00-00.yv1edar.mongodb.net:27017,ac-1ch4szh-shard-00-01.yv1edar.mongodb.net:27017,ac-1ch4szh-shard-00-02.yv1edar.mongodb.net:27017/?ssl=true&replicaSet=atlas-oyr1st-shard-0&authSource=admin&retryWrites=true&w=majority
-      uri: mongodb+srv://curtisjhu:UNCkrRmmR8wTIxfb@farmers-market.yv1edar.mongodb.net/market?retryWrites=true&w=majority
+      uri: <%= Rails.application.credentials.MONGODB_URI %>
 
       options:
         server_selection_timeout: 5
