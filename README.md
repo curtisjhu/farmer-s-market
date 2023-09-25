@@ -14,4 +14,4 @@ This was a ~1 day project + some time to refine the code. I basically learned Ru
 > Backend: RubyOnRails + MongoDB -> digital ocean docker container
 
 ![Layout](lucid.png)
-[![Watch the video](cover.png)](https://youtu.be/ySLy7PqLjXQ)
+// [![Watch the video](cover.png)](https://youtu.be/ySLy7PqLjXQ)
